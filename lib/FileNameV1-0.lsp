@@ -36,28 +36,28 @@
 ; =============
 
 ; Get the name of the file.
-(setq file_name (getvar "dwgname"))			; "GRE.EEC.H.21.ES.P.12787.16.kkk.xx.dwg"
+(setq file_name (getvar "dwgname"))			; "AAA.BBB.C.DD.EE.F.GGGGG.HH.III.JJ.dwg"
 
 ; Create a list with each part of the file name.
-(setq list_names (vle-string-split "." file_name))	; ("GRE","EEC","H","21","ES","P","12787","16","kkk","xx","dwg")
+(setq list_names (vle-string-split "." file_name))	; ("AAA","BBB","C","DD","EE","F","GGGGG","HH","III","JJ","dwg")
 
 ; Identify each part of the file with a variable.
-(setq caj_group (nth 0 list_names))			; "GRE"
-(setq caj_function (nth 1 list_names))			; "EEC"
-(setq caj_type (nth 2 list_names))			; "H"
-(setq caj_issuer (nth 3 list_names))			; "21"
-(setq caj_country (nth 4 list_names))			; "ES"
-(setq caj_tec (nth 5 list_names))			; "P"
-(setq caj_plant (nth 6 list_names))			; "12787"
-(setq caj_system (nth 7 list_names))			; "16"
-(setq caj_progressive (nth 8 list_names))		; "kkk"
-(setq caj_revision (nth 9 list_names))			; "xx"
+(setq caj_group (nth 0 list_names))			; "AAA"
+(setq caj_function (nth 1 list_names))			; "BBB"
+(setq caj_type (nth 2 list_names))			; "C"
+(setq caj_issuer (nth 3 list_names))			; "DD"
+(setq caj_country (nth 4 list_names))			; "EE"
+(setq caj_tec (nth 5 list_names))			; "F"
+(setq caj_plant (nth 6 list_names))			; "GGGGG"
+(setq caj_system (nth 7 list_names))			; "HH"
+(setq caj_progressive (nth 8 list_names))		; "III"
+(setq caj_revision (nth 9 list_names))			; "JJ"
 
 ; Update those variables that needs to be displayed differently.
-(setq caj_issuer (spaced_str caj_issuer))		; "2 1"
-(setq caj_country (spaced_str caj_country))		; "E S"
-(setq caj_plant (spaced_str caj_plant))			; "1 2 7 8 7"
-(setq caj_system (spaced_str caj_system))		; "1 6"
-(setq caj_progressive (spaced_str caj_progressive))	; "k k k"
-(setq caj_revision (spaced_str caj_revision))		; "x x"
+(setq caj_issuer (spaced_str caj_issuer))		; "D D"
+(setq caj_country (spaced_str caj_country))		; "E E"
+(setq caj_plant (spaced_str caj_plant))			; "G G G G G"
+(setq caj_system (spaced_str caj_system))		; "H H"
+(setq caj_progressive (spaced_str caj_progressive))	; "I I I"
+(setq caj_revision (spaced_str caj_revision))		; "J J"
 
